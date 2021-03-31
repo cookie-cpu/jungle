@@ -6,15 +6,21 @@
 
 
 
-  <%=  @order.inspect %>
+
+
+ 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
     
-    <%=  @enhanced_cart %>
+    <%=  @cart.inspect %>
   </div>
+
   <h4>Email: <%= @order.email %></h4>
-    <h4>Total: <%= humanized_money_with_symbol @order.total_cents %></h4>
+  <h4>Total: <%= humanized_money_with_symbol @order.total_cents %></h4>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
+
+<br>
+<%=  @order.inspect %>

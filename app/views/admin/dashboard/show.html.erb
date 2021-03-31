@@ -1,3 +1,24 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
-<h1>testing testing</h1>
+<div class="container" style="width: 95%; border: 3px solid black; padding: 2rem;">
+  <h1>Jungle Dashboard</h1>
+  <hr>
+
+  <div style="padding: 2rem; display: flex; justify-content:space-between">
+    <div class="card" style="width: 45%; border: 3px solid black;">
+      <div class="card-body" style="padding: 1rem;">
+        <h3 class="card-title">Products Available</h2>
+        <h2 class="card-text"><%=  @product_num %></p>
+        <a href="/admin/products" class="btn btn-primary">Admin Products Page</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 45%; border: 3px solid black">
+      <div class="card-body" style="padding: 1rem;">
+        <h3 class="card-title">Categories</h2>
+        <h2 class="card-text"><%=  @category_num %></p>
+        <a href="/admin/catergories" class="btn btn-primary">Admin Category Page</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+

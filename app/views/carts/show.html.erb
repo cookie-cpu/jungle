@@ -1,5 +1,12 @@
 <section class="cart-show">
 
+<% if enhanced_cart.length == 0 %>
+    <div class="alert alert-warning" role="alert">
+    <h1> Your cart is empty! Please add products to your cart.</h1>
+    </div>
+    <a href='/'> Jungle Home Page</a>
+  <% else %>
+
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -32,6 +39,8 @@
     </table>
   </div>
 
+
+ 
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +57,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>

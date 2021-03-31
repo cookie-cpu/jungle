@@ -3,10 +3,19 @@
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
-
+  # The line items in the order and:
+  # Their image, name and description
+  # Their respective quantities and line item totals
+  # The final amount for the order
+  # The email that was used
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    Email: <%= @order.email %>
+    Total: <%= humanized_money_with_symbol @order.total_cents %>
+    
+   
   </div>
+  <%=  @order.inspect %>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 

@@ -50,6 +50,8 @@
           <% end %>
         </li>
 
+            <%= puts "CURRENT USER IS: ", @current_user.inspect %>
+  
         <% if @current_user %>
         <li>
            Signed in as <%= @current_user.firstname %> 

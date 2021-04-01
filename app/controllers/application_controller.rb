@@ -34,7 +34,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  #can use 'before_filter :authorize' to secure controllers from not logged in clients
   def authorize
     redirect_to '/login' unless current_user
   end

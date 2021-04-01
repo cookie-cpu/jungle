@@ -21,11 +21,12 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new, :create]
+  
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  get '/signup', to: 'users#new'
-  post '/users', to: 'users#create'
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
   
 end

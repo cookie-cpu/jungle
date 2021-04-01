@@ -50,11 +50,11 @@
           <% end %>
         </li>
 
-            <%= puts "CURRENT USER IS: ", @current_user.inspect %>
+            <%= puts "CURRENT USER IS: ", current_user.inspect %>
   
-        <% if @current_user %>
+        <% if current_user %>
         <li>
-           Signed in as <%= @current_user.firstname %> 
+           Signed in as <%= current_user.email %> 
         </li>
         <li>
            <%= link_to "Logout", '/logout' %>

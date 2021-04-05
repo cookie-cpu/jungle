@@ -1,5 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+
+    it "should save a user if given valid attributes" do 
+      @user = User.new(
+        firstname: "Matthew",
+        lastname: "Cook",
+        email: "matthew@gmail.com", 
+        password: "password",
+        password_confirmation: "password",
+      )
+      @user.save
+      expect(@user).to be_valid
+    end
+
+
+
+
+
+  
 end

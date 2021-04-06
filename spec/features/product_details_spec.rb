@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "ProductDetails", type: :feature do
-  
+
   before :each do
     @category = Category.create! name: 'Apparel'
 
@@ -14,6 +14,21 @@ RSpec.feature "ProductDetails", type: :feature do
         price: 64.99
       )
     end
+  end
+
+  scenario "They can visit a specific product page" do
+    # ACT
+    visit root_path
+    # page.find('.product article:first-child')
+    click_on('Details', match: :first)
+
+    # DEBUG
+    # save_screenshot
+
+    # VERIFY
+    expect(page).to have_css 'article.product-detail'
+    # save_screenshot
+    
   end
 
 

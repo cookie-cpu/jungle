@@ -22,6 +22,7 @@ RSpec.feature "AddToCarts", type: :feature do
 
     #debug
     # save_screenshot
+    #puts page.html
 
     expect(page).to have_text('My Cart (0)')
 
